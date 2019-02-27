@@ -14,6 +14,7 @@
 
 function searchByMid($list, $value)
 {
+    if (empty($list) || empty($value)) return '参数错误';
     $start = 0;
     $end = count($list)-1;
     echo '目标数组：'.json_encode($list).' 查找数据：'.$value.'<br>';
@@ -41,7 +42,7 @@ function searchByMid($list, $value)
 }
 
 $list = array(1,3,5,7,9);
-print_r(searchByMid($list, 10));
+print_r(searchByMid($list, 9));
 
 
 ?>
