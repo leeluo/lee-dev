@@ -20,7 +20,7 @@ function searchByMid($list, $value)
     $i = 0;
     while ($start <= $end) {  //确保最后一次循环只定位到一个元素
         $i++;
-        $mid = floor(($start+$end)/2);
+        $mid = floor(($start+$end)/2); //定位中间位置坐标，向下取整
         $guess = $list[$mid];
         echo '初始值：start:'.$start.' end:'.$end.' mid:'.$mid.'<br>';
         if ($guess == $value) {
@@ -40,9 +40,8 @@ function searchByMid($list, $value)
     return '数组中无此元素';
 }
 
-$list1 = array(1,3,5,7,9);
-$list2 = array(2,4,6,8,10);
-print_r(searchByMid($list2, 10));
+$list = array(1,3,5,7,9);
+print_r(searchByMid($list, 10));
 
 
 ?>
