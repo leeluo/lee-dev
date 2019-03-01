@@ -44,5 +44,14 @@ function searchByMid($list, $value)
 $list = array(1,3,5,7,9);
 print_r(searchByMid($list, 9));
 
+//执行结果：
+//目标数组：[1,3,5,7,9] 查找数据：9
+//初始值：start:0 end:4 mid:2
+//第 1 次循环：start：3 end:4 mid:2
+//初始值：start:3 end:4 mid:3
+//第 2 次循环：start：4 end:4 mid:3
+//初始值：start:4 end:4 mid:4
+//第 3 次循环：start：4 end:4 mid:4
+//该元素存在于数组中第4位
 
 ?>
