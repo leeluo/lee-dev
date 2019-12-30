@@ -53,5 +53,3 @@ print_r(searchByMid($list, 9));
 //初始值：start:4 end:4 mid:4
 //第 3 次循环：start：4 end:4 mid:4
 //该元素存在于数组中第4位
-
-?>
