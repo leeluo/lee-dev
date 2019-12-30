@@ -1,4 +1,5 @@
 <?php
+
 class MyArray
 {
     //数据
