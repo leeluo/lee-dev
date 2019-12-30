@@ -51,8 +51,8 @@ class MyArray
             echo '索引溢出：数组容量为' . $this->capacity . '，插入位置索引为' . $index . PHP_EOL; exit;
         }
         if ($this->checkIfFull()) {
-            //数组空间已满，重新申请空间，进行数据搬移操作（向对应位置插入数据，原位置后所有数据后移一位）
-            $this->capacity++;
+            //数组空间已满，重新申请1.5倍空间，进行数据搬移操作（向对应位置插入数据，原位置后所有数据后移一位）
+            $this->capacity = intval(1.5*$this->capacity);
         }
         $arrayLen = $this->length;
         //先做数据搬移，给要插入位置腾地方
@@ -105,7 +105,7 @@ class MyArray
             echo '索引溢出：数组容量为' . $this->capacity . '，更新位置索引为' . $index . PHP_EOL; exit;
         }
         foreach ($this->data as $k => $v) {
-            if ($index == $k) echo $v . PHP_EOL;
+            if ($index == $k) echo '数组索引' . $index . '位置的值为' . $v . PHP_EOL;
         }
     }
 
@@ -114,7 +114,7 @@ class MyArray
      */
     public function printData()
     {
-        echo '数据容量' . $this->capacity . PHP_EOL;
+        echo '数据容量' . $this->capacity . ' 数组长度' . $this->length . PHP_EOL;
         if ($this->length <= 0) print ('空');
         $format = "";
         for ($i = 0; $i < $this->length; $i++) {

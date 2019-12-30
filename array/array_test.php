@@ -12,7 +12,7 @@
  * 问题：
  * 1.实现一个支持动态扩容的数组
  * 2.实现一个大小固定的有序数组，支持动态增删改操作
- * 3.实现两个有序数组合并为一个有序数组
+ * 3.实现两个有序数组合并为一个有序数组 后续排序算法实现 todo...
  * */
 
 require "./array.php";
@@ -26,21 +26,25 @@ for ($i=0; $i<10; $i++) {
     $myArray->insert($i, $i+1);
 }
 $myArray->printData();
+echo PHP_EOL;
 
 //数组动态扩容,向数组对应位置插入元素，原对应位置及之后元素后移
 $myArray->insert(3, 10);
 echo '--数组动态扩容,向数组对应位置插入元素，原对应位置及之后元素后移--' . PHP_EOL;
 $myArray->printData();
+echo PHP_EOL;
 
 //删除数组对应位置元素，该位置之后元素向前移一位
 $myArray->delete(3);
 echo '--删除数组对应位置元素，该位置之后元素向前移一位--' . PHP_EOL;
 $myArray->printData();
+echo PHP_EOL;
 
 //更新数组元素
 $myArray->update(3, 90);
 echo '--更新数组元素--' . PHP_EOL;
 $myArray->printData();
+echo PHP_EOL;
 
 //查找数组元素
 echo '--查找数组元素--' . PHP_EOL;
