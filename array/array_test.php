@@ -16,26 +16,32 @@
  * */
 
 require "./array.php";
+
 //声明固定容量数组
 $myArray = new MyArray(10);
+
 //初始化数组元素
 echo '--初始化数组元素--' . PHP_EOL;
 for ($i=0; $i<10; $i++) {
     $myArray->insert($i, $i+1);
 }
 $myArray->printData();
+
 //数组动态扩容,向数组对应位置插入元素，原对应位置及之后元素后移
 $myArray->insert(3, 10);
 echo '--数组动态扩容,向数组对应位置插入元素，原对应位置及之后元素后移--' . PHP_EOL;
 $myArray->printData();
+
 //删除数组对应位置元素，该位置之后元素向前移一位
 $myArray->delete(3);
 echo '--删除数组对应位置元素，该位置之后元素向前移一位--' . PHP_EOL;
 $myArray->printData();
+
 //更新数组元素
 $myArray->update(3, 90);
 echo '--更新数组元素--' . PHP_EOL;
 $myArray->printData();
+
 //查找数组元素
 echo '--查找数组元素--' . PHP_EOL;
 $myArray->find(3);
